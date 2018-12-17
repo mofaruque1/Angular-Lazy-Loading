@@ -1,3 +1,11 @@
+# Notes
+This is just a reference app for how to work with multimodule and routing
+1.	Create an app $ng new app-name --routing
+2.	Create a feature module with routing $ng g module modul-ename –routing
+3.	Add a component to the feature module $ng g c module-name/component-name
+4.	Add another feature module $ng g module module-name –routing
+5.	Add a component $ng g c module-name/component-name
+
 # LazyLoadingApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
