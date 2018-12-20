@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../../shared/data.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-customer-list',
   templateUrl: './customer-list.component.html',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {
+    this.displayData();
+  }
+
+  displayData(){
+
+    console.log('--here---');
+    this.dataService.getdata().subscribe((res:any)=>{
+      console.log(res);
+    })
   }
 
 }
